@@ -1,3 +1,4 @@
-# STM32F429I_UART_DMA_loop
+# STM32F429I_ITG-3200_ADXL345
 
-Пример работы с UART DMA на STM32F429I Discovery.
+Пример работы с акселерометром на STM32F429I Discovery.
+

@@ -1,6 +1,6 @@
 /**
   ******************************************************************************
-  * @file    UART/UART_TwoBoards_ComDMA/Src/stm32f4xx_it.c 
+  * @file    I2C/I2C_TwoBoards_ComPolling/Src/stm32f4xx_it.c 
   * @author  MCD Application Team
   * @version V1.2.3
   * @date    09-October-2015 
@@ -39,13 +39,13 @@
 
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
-#include "stm32f4xx_it.h"
-   
+#include "stm32f4xx_it.h"   
+
 /** @addtogroup STM32F4xx_HAL_Examples
   * @{
   */
 
-/** @addtogroup UART_TwoBoards_ComDMA
+/** @addtogroup I2C_TwoBoards_ComPolling
   * @{
   */
 
@@ -53,8 +53,8 @@
 /* Private define ------------------------------------------------------------*/
 /* Private macro -------------------------------------------------------------*/
 /* Private variables ---------------------------------------------------------*/
-/* UART handler declared in "main.c" file */
-extern UART_HandleTypeDef UartHandle;
+/* I2C handler declared in "main.c" file */
+extern I2C_HandleTypeDef hi2c;
 
 /* Private function prototypes -----------------------------------------------*/
 /* Private functions ---------------------------------------------------------*/
@@ -167,36 +167,6 @@ void SysTick_Handler(void)
 /*  available peripheral interrupt handler's name please refer to the startup */
 /*  file (startup_stm32f4xx.s).                                               */
 /******************************************************************************/
-
-/**
-  * @brief  This function handles DMA RX interrupt request.
-  * @param  None
-  * @retval None   
-  */
-void USARTx_DMA_RX_IRQHandler(void)
-{
-  HAL_DMA_IRQHandler(UartHandle.hdmarx);
-}
-
-/**
-  * @brief  This function handles DMA TX interrupt request.
-  * @param  None
-  * @retval None  
-  */
-void USARTx_DMA_TX_IRQHandler(void)
-{
-  HAL_DMA_IRQHandler(UartHandle.hdmatx);
-}
-
-/**
-  * @brief  This function handles USARTx interrupt request.
-  * @param  None
-  * @retval None
-  */
-void USARTx_IRQHandler(void)
-{
-  HAL_UART_IRQHandler(&UartHandle);
-}
 
 /**
   * @brief  This function handles PPP interrupt request.

@@ -1,6 +1,6 @@
 /**
   ******************************************************************************
-  * @file    UART/UART_TwoBoards_ComDMA/Inc/stm32f4xx_hal_conf.h
+  * @file    I2C/I2C_TwoBoards_ComPolling/Inc/stm32f4xx_hal_conf.h
   * @author  MCD Application Team
   * @version V1.2.3
   * @date    09-October-2015 
@@ -58,7 +58,7 @@
 /* #define HAL_DAC_MODULE_ENABLED      */ 
 /* #define HAL_DCMI_MODULE_ENABLED     */ 
 #define HAL_DMA_MODULE_ENABLED     
-/* #define HAL_DMA2D_MODULE_ENABLED    */ 
+/* #define HAL_DMA2D_MODULE_ENABLED    */
 /* #define HAL_ETH_MODULE_ENABLED      */
 #define HAL_FLASH_MODULE_ENABLED     
 /* #define HAL_NAND_MODULE_ENABLED     */
@@ -74,20 +74,20 @@
 /* #define HAL_LTDC_MODULE_ENABLED     */
 #define HAL_PWR_MODULE_ENABLED
 #define HAL_RCC_MODULE_ENABLED      
-/* #define HAL_RNG_MODULE_ENABLED       */   
-/* #define HAL_RTC_MODULE_ENABLED       */
-/* #define HAL_SAI_MODULE_ENABLED        */   
-/* #define HAL_SD_MODULE_ENABLED         */
+/* #define HAL_RNG_MODULE_ENABLED      */   
+/* #define HAL_RTC_MODULE_ENABLED      */
+/* #define HAL_SAI_MODULE_ENABLED      */   
+/* #define HAL_SD_MODULE_ENABLED       */
 #define HAL_SPI_MODULE_ENABLED       
-/* #define HAL_TIM_MODULE_ENABLED        */  
-#define HAL_UART_MODULE_ENABLED
+/* #define HAL_TIM_MODULE_ENABLED      */  
+/* #define HAL_UART_MODULE_ENABLED     */
 /* #define HAL_USART_MODULE_ENABLED    */ 
-/* #define HAL_IRDA_MODULE_ENABLED      */
-/* #define HAL_SMARTCARD_MODULE_ENABLED  */
+/* #define HAL_IRDA_MODULE_ENABLED     */
+/* #define HAL_SMARTCARD_MODULE_ENABLED*/
 /* #define HAL_WWDG_MODULE_ENABLED     */
 #define HAL_CORTEX_MODULE_ENABLED   
-/*#define HAL_PCD_MODULE_ENABLED*/
-/*#define HAL_HCD_MODULE_ENABLED*/
+/* #define HAL_PCD_MODULE_ENABLED      */
+/* #define HAL_HCD_MODULE_ENABLED      */
 
 
 /* ########################## HSE/HSI Values adaptation ##################### */
@@ -101,7 +101,7 @@
 #endif /* HSE_VALUE */
 
 #if !defined  (HSE_STARTUP_TIMEOUT)
-    #define HSE_STARTUP_TIMEOUT    ((uint32_t)5000)   /*!< Time out for HSE start up, in ms */
+  #define HSE_STARTUP_TIMEOUT    ((uint32_t)5000)   /*!< Time out for HSE start up, in ms */
 #endif /* HSE_STARTUP_TIMEOUT */
 
 /**
